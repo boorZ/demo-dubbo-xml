@@ -5,6 +5,7 @@ import com.example.dubboservice.DemoOne1Service;
 import com.example.dubboservice.DemoOne2Service;
 import com.example.dubboservice.DemoTwo1Service;
 import com.example.dubboservice.DemoTwo2Service;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,13 +15,13 @@ public class HelloController {
 	@Reference(version = "1.0.1")
 	private DemoOne1Service one1Service;
 
-	@Reference(version = "1.0.1")
+	@Autowired
 	private DemoOne2Service one2Service;
 
-	@Reference(version = "1.0.1")
+	@Autowired
 	private DemoTwo1Service two1Service;
 
-	@Reference(version = "1.0.1")
+	@Autowired
 	private DemoTwo2Service two2Service;
 
 	@GetMapping(value = "/hello1")

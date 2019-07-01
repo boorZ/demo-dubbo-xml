@@ -14,6 +14,9 @@
     <dubbo:annotation package="com.example.dubboconsumer" />
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <!--<dubbo:reference id="demoService" check="false" interface="com.dubbo.springboot.service.DemoService"/>-->
+<!--    <dubbo:reference id="DemoOne1Service" check="false" interface="com.example.dubboservice.DemoOne1Service"/>-->
+    <dubbo:reference id="DemoOne2Service" check="false" interface="com.example.dubboservice.DemoOne2Service"/>
+    <dubbo:reference id="DemoTwo1Service" check="false" interface="com.example.dubboservice.DemoTwo1Service"/>
+    <dubbo:reference id="DemoTwo2Service" version="1.0.1" check="false" interface="com.example.dubboservice.DemoTwo2Service"/>
 
 </beans>
