@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>dubbo-consumer</artifactId>
+    <artifactId>dubbo-provider-two</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dubbo-consumer</name>
+    <name>dubbo-provider-two</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -29,18 +29,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>dubbo-provider</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- dubbo 和 zookeeper 依赖-->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>dubbo-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
@@ -56,7 +57,6 @@
             <artifactId>zkclient</artifactId>
             <version>0.2</version>
         </dependency>
-
     </dependencies>
 
     <build>
